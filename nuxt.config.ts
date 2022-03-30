@@ -9,13 +9,19 @@ export default defineNuxtConfig({
         postcss: {
             postcssOptions: {
                 plugins: {
-                tailwindcss: {},
-                autoprefixer: {},
+                    tailwindcss: {},
+                    autoprefixer: {},
                 },
             },
         },
     },
-    // css: [
-    //     "~/assets/css/style.css"
-    // ],
+    css: [
+        "~/assets/css/style.css"
+    ],
+    publicRuntimeConfig: {
+        // baseURL: process.env.BASE_URL
+    },
+    privateRuntimeConfig: {
+        tmdbApiKey: process.env.TMDB_API_KEY
+    },
 })
